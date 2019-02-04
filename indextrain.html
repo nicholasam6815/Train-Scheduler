@@ -1,0 +1,101 @@
+<!Doctype html>
+<html>
+<head>
+    <title>
+        Train Schedule
+    </title>
+<!--all links-->  
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!--link to CSS-->
+ <link  rel = "stylesheet" type = "text/css" href = "reset.css">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Firebase Reference -->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+<!-- Moment.js Reference -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+    <!--title-->
+    <div id = "header" class = "jumbotron text-center" >
+        <h1 id = "title">
+            All Aboard
+        </h1>
+    </div>
+    <!--container for the info and table-->
+    <div class="container">
+        <!--making a row-->
+            <div class="row">
+                 <!--there will be 2 collumns - one for add info  and  table results-->
+
+                <div class="col">
+
+              <!-- enter data-->
+              <div class="row">
+                    <div class="col">
+                        <!--form to fill table linked to firebase-->
+                        <form>
+                            <div class="form-group" id="add">
+                                <div class="header" > <strong>
+                                            Add Train
+                                </strong> </div>
+                                <!--label for name -->
+                                <label for="name" id="label">Train Name</label>
+                                <input type="text" class="form-control col-sm-11" id="name">
+            
+                                  <!--label for destination -->
+                                <label for="dest" id="label">Destination</label>
+                                <input type="text" class="form-control col-sm-11" id="dest">
+                        
+                                  <!--label for first time -->
+                                <label for="firstTime" id="label">First Train Time(24:00) </label>
+                                <input type="text" class="form-control col-sm-11" id="firstTime">
+            
+                                    <!--label for freq -->
+                                <label for="freq" id="label">Frequency (min) </label>
+                                <input type="text" class="form-control col-sm-11" id="freq">
+                              
+                                    <!--button-->
+                                <button class="btn btn-primary btn-lg" id="trainSubmit" type="submit" style="margin: 2%">Submit</button>
+                            </div>
+                        </form>
+                    </div>  
+              </div>
+
+                  <br>
+
+             <!--table for current train Schedule-->
+              <div class="container-fill " id="current">
+                    <div class="header"><strong>
+                      Current Train Schedule
+                    </strong></div>
+                    <div class="card-body ">
+                        <table class="table" id="trainTable">
+                            <thead>
+                              <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                              </tr>
+                            </thead>
+                            <!--content goes here-->
+                            <tbody></tbody> 
+                        </table>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!--css for style-->
+    <link  rel = "stylesheet" type = "text/css" href = "styletrain.css">
+<!--javascript-->
+<script src="javascripttrain.js"></script>
+</body>
+</html>

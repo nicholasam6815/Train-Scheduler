@@ -1,0 +1,24 @@
+body {
+  background-image: url("train.png");
+  color: white;
+}
+
+#header
+{
+  background-color: transparent;
+
+
+}
+
+#add {
+  position: relative;
+  width: 500px;
+  height: 420px;
+  padding: 2%;
+  overflow: hidden;
+  box-shadow: 0 0 25px #2b2628;
+  font-size: 20px;
+}
+
+
+
